@@ -1,38 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
+  background-image: linear-gradient(90deg, #410076, #8820dd);
+}
+
+header { 
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 32px;
+}
+
+h1 {
+  color: #888;
+  font-size:42px;
+  text-align:center;
+  margin-bottom: 16px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius:16px;
+  overflow:hidden;
+  width:100%;
+  max-width:480px;
+  margin-bottom: 16px;
+  transition:0.4;
 }
 
-.App-link {
-  color: #61dafb;
+.search-box input {
+  display: block;
+  appearance: none;
+  outline: none;
+  border: none;
+  padding: 16px;
+  width: 100%;
+  transition:0.4s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.results {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align:center;
 }
