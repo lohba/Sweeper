@@ -1,5 +1,5 @@
 const axios = require('axios')
-require('dotenv').config();
+//require('dotenv').config();
 
 let collection
 let filterStateData
@@ -63,7 +63,7 @@ const options = {
     method: 'GET',
     url: 'https://api.opensea.io/api/v1/assets',
     params: {order_by: 'pk', order_direction: 'desc', limit: '20', offset: '0'},
-    headers: {Accept: 'application/json', 'X-API-KEY': key}
+    headers: {Accept: 'application/json', 'X-API-KEY': process.env.REACT_APP_API_KEY}
   };
 
   console.log(process.env.REACT_APP_API_KEY)

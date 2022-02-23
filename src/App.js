@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css';
 import SearchBar from './Components/SearchBar';
+const axios = require('axios');
 
 function App() {
 
