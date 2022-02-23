@@ -1,6 +1,8 @@
 import React from 'react';
 import "../App.css";
 import {useState} from 'react';
+const axios = require('axios');
+
 
 function SearchBar() {   
     const [search, setSearch] = useState(""); 
@@ -14,6 +16,8 @@ function SearchBar() {
         const endpoint = await fetch(`https://testnets-api.opensea.io/api/v1/collection/${search}`);
         const {collection} = await endpoint.json();
         console.log(collection.primary_asset_contracts)
+       
+        //console.log(key)
         //console.log(collection.primary_asset_contracts[0].name)
         //setResults(json.query.search);
         //setSearchInfo(json.query.searchInfo);
